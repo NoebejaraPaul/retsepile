@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IWB - Electronic Recycling Solutions">
+    <title>IWB - Electronic Recycling</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+           /* Basic Reset */
+           * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 250px;
+            background: #2c3e50;
+            padding: 2rem 1rem;
+            color: white;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            padding: 0.5rem;
+            display: block;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Sections */
+        section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            margin-left: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+          /* Banner Section */
+          .banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('banner.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .service-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        /* Tools Section */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 2rem;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* Stakeholders Section */
+        .stakeholders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 2rem;
+        }
+
+        .stakeholder-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icons a {
+            font-size: 2rem;
+            color: #2c3e50;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #3498db;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+            
+            section {
+                margin-left: 0;
+                padding: 2rem 1rem;
+            }
+            
+            .services, .tools-grid, .stakeholders-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">IWB</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#tools">Software Tools</a></li>
+            <li><a href="#stakeholders">Stakeholders</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="banner">
+        <div>
+            <h1>Electronic Recycling Experts</h1>
+            <p>Serving Southern Africa Since 2024</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <img src="ram.jpg" alt="RAM Recycling" class="service-image">
+                <div class="service-content">
+                    <h3>RAM Recycling</h3>
+                    <p>Professional memory module recycling services</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="hard.webp" alt="Hard Drive Destruction" class="service-image">
+                <div class="service-content">
+                    <h3>Hard Drive Destruction</h3>
+                    <p>Secure data destruction and material recovery</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="mother.jpg" alt="Motherboard Processing" class="service-image">
+                <div class="service-content">
+                    <h3>Motherboard Processing</h3>
+                    <p>Component recovery and safe disposal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Tools Section -->
+     <section id="tools">
+          <h2>Software Tools</h2>
+          <div class="tools-grid">
+              <div class="tool-card">
+                  <h3>DataRecover Pro</h3>
+                  <p>Monthly: M49.99</p>
+                  <p>Annual: M499.99</p>
+              </div>
+              <div class="tool-card">
+                <h3>MyAnti-virus Pro</h3>
+                <p>Monthly: M49.99</p>
+                <p>Annual: M499.99</p>
+              </div>
+              <div class="tool-card">
+                <h3>Authenticator Pro</h3>
+                <p>Monthly: M49.99</p>
+                <p>Annual: M499.99</p>
+            </div>
+          </div>
+      </section>
+
+      <!-- Stakeholders Section -->
+      <section id="stakeholders">
+          <h2>Our Stakeholders</h2>
+          <div class="stakeholders-grid">
+              <div class="stakeholder-card">
+                  <h3>TechInvest Africa</h3>
+                  <p>Investor</p>
+                  <a href="#">Visit Website</a>
+              </div>
+              <div class="stakeholder-card">
+                  <h3>GreenRecycle Ltd</h3>
+                  <p>Partner</p>
+                  <a href="#">Visit Website</a>
+              </div>
+         
+          </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+          <div class="contact-content">
+              <h2>Contact Us</h2>
+              <p>Email: info@iwb.co.ls</p>
+              <p>Phone: +266 5842 1615</p>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+          </div>
+      </section>
+</body>
+</html>
